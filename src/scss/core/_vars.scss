@@ -1,0 +1,36 @@
+:root {
+    // COLORS//
+    --color-back-prm: #F318BD;
+    --color-back-sec: #00FA93;
+    --color-back-ter: #E6FE52;
+    --color-back-black: #202C36;
+    --color-txt-prm: #E02F88;
+    --color-txt-sec: #00FA93;
+    --color-txt-ter: #E6FE52;
+    --color-txt-black: #202C36;
+    --color-txt-gris: #F8F7F7;
+    // FONTS 
+    --primariaRegular: 'AndaleMono';
+    --secundariaRegular: "GothamNarrow-Black";
+    --terceraRegular: 'Bebas Neue', cursive;
+    --h1: calc(80px + 10 * ((100vw - 1280px) / 1920)); //
+    --h2: calc(60px + 10 * ((100vw - 1280px) / 1920));
+    --h3: calc(24px + 10 * ((100vw - 1280px) / 1920)); //
+    --h4: calc(18px + 10 * ((100vw - 1280px) / 1920)); //
+    --h5: calc(14px + 10 * ((100vw - 1280px) / 1920)); //
+    --h6: calc(12px + 10 * ((100vw - 1280px) / 1920)); //
+    // MISC
+    /// SECTIONS 
+    --paddingSection: 130px 40px;
+    --paddingTop: calc(200px + 25 * ((100vw - 1920px)/ 320));
+    ///// MEDIA MOBILE /////
+    @media (max-width: 992px) {
+        --h1: calc(60px + 10 * ((100vw - 320px) / 1280)); //
+        --h2: calc(36px + 10 * ((100vw - 320px) / 1280)); //
+        --h3: calc(20px + 10 * ((100vw - 320px) / 1280));
+        --h4: calc(16px + 10 * ((100vw - 320px) / 1280));
+        --h5: calc(14px + 10 * ((100vw - 320px) / 1280)); //
+        --h6: calc(12px + 10 * ((100vw - 320px) / 1280)); //
+        --paddingSection: 50px 0px;
+    }
+}

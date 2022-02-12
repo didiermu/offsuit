@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://example.com/sitemap_location.xml
+http://www.google.com/ping?sitemap=https://example.com/sitemap.xml
