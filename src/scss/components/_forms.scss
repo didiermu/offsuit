@@ -1,54 +1,169 @@
 @mixin boton {
-  appearance: none;
-  border: 0;
-  outline: 0;
-  background: #fff;
-  min-width: 150px;
-  height: 50px;
-  border-radius: 50px;
-  font-size: 20px;
-  padding: 5px 30px 0;
-  text-transform: uppercase;
-  transition: .3s ease-in-out all;
-  
-  
-  &.primario{
-    background: var(--naranja);
+    appearance: none;
+    border: 0;
+    outline: 0;
     color: #fff;
-
-    &:hover{
-      background: var(--azul);
-      
-    }
-  }
-
-  @media (max-width:992px) {
-    min-width: auto;
-    width: 100%;
+    min-width: 150px;
     height: 40px;
-    font-size: 16px;
-  }
+    text-transform: uppercase;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    transition: .3s ease-in-out all;
+    font: {
+        size: var(--h4);
+        family: var(--secundariaBold);
+    }
+    &-primary {
+        background: var(--color-back-prm);
+        color: #fff;
+        &:hover {
+            background: var(--color-back-black);
+        }
+    }
+    @media (max-width:992px) {
+        min-width: auto;
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+    }
 }
 
-.botonera{
-  .boton{
-    margin: 0 15px;
-  }
+@mixin input {
+    position: relative;
+    label {
+        font-size: var(--h4);
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        transition: .3s ease-in-out all;
+    }
+    input {
+        appearance: none;
+        border: none;
+        border-bottom: 1px solid var(--color-back-black);
+        outline: none;
+        height: 30px;
+    }
+    &.active {
+        label {
+            font-size: var(--h6);
+            top: -20px;
+            bottom: auto;
+        }
+    }
+}
 
-  @media (max-width:992px) {
-    flex-direction: column;
+@mixin textarea {
+    appearance: none;
+    border: 1px solid var(--color-back-black);
     width: 100%;
-
-    a{
-      width: 100%;
+    resize: none;
+    padding: 10px;
+    min-height: 120px;
+    font-size: var(--h4);
+    &::placeholder {
+        color: var(--color-txt-black);
     }
-
-    .boton{
-      margin: 0 0 20px 0;
-    }
-  }
 }
 
-.boton{
-  @include boton;
+@mixin checkbox {
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    flex-flow: row wrap;
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        &:checked~.checkmark {
+            background-color: #fff;
+        }
+        &:checked~.checkmark:after {
+            display: block;
+        }
+    }
+    .checkmark {
+        height: 20px;
+        width: 20px;
+        border-radius: 1px;
+        border: 1px solid var(--color-back-black);
+        margin-right: 10px;
+        position: relative;
+        &:after {
+            left: 5px;
+            top: 0;
+            bottom: 4px;
+            margin: auto;
+            width: 8px;
+            height: 12px;
+            color: var(--color-back-prm);
+            border: {
+                style: solid;
+                width: 0 3px 3px 0;
+            }
+            transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    label:not(.checkmark) {
+        color: var(--color-txt-black);
+        margin: 0;
+        font-size: var(--h6);
+        flex-basis: 90%;
+    }
+    .error-input {
+        color: #000;
+        flex: 0 0 100%;
+        margin: 5px auto;
+        text-align: center;
+    }
+    @media (max-width:992px) {
+        .checkmark {
+            height: 20px;
+            width: 20px;
+            margin: 0 10px 0 0;
+        }
+        .labelLegales {
+            font-size: 14px;
+        }
+        .error-input {
+            margin: 10px auto;
+        }
+    }
+}
+
+.checkboxes {
+    @include checkbox;
+}
+
+.input__group {
+    @include input;
+}
+
+textarea {
+    @include textarea;
+}
+
+.boton {
+    @include boton;
+}
+
+.botonera {
+    .boton {
+        margin: 0 15px;
+    }
+    @media (max-width:992px) {
+        flex-direction: column;
+        width: 100%;
+        a {
+            width: 100%;
+        }
+        .boton {
+            margin: 0 0 20px 0;
+        }
+    }
 }

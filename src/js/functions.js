@@ -50,99 +50,69 @@
 //     );
 // }
 
-// const carruseles = () => {
-//     const swiper = new Swiper(".swiper-container", {
-//         direction: "horizontal",
-//         autoplay: true,
-//         loop: true,
-//         breakpoints: {
-//             320: {
-//                 slidesPerView: 2,
-//                 spaceBetween: 20,
-//                 centeredSlidesBounds: false,
-//             },
-//             992: {
-//                 slidesPerView: "auto",
-//                 spaceBetween: 50,
-//                 centeredSlidesBounds: true,
-//             },
-//         },
-//     });
-// }
-
-// function cookies() {
-//     if (localStorage.getItem("cookie")) {
-//         $("#msjCookies").remove();
-//         $(".detalle-internas--section").addClass("no-cookie");
-//     }
-
-//     $(".closeCookie").on("click", function() {
-//         localStorage.setItem("cookie", "true");
-//         $("#msjCookies").remove();
-//         $(".detalle-internas--section").addClass("no-cookie");
-//     });
-// }
-
-// // parallax nubes
-// const clouds = () => {
-//     gsap.to(".cloud", {
-//         yPercent: -400,
-//         ease: "none",
-//         scrollTrigger: {
-//             trigger: "main",
-//             start: "top top",
-//             end: "bottom top",
-//             scrub: 1,
-//         },
-//     });
-// };
-
-// // consulta de json con info de artistas
-// const artistas = (indexArtista) => {
-//     $.getJSON("../js/artistas.json", function(data) {
-
-//         $.each(data, function(key, val) {
-//             $("title").text("Pulso GNP 2022 - " + data[indexArtista].__1);
-//             $("#titleArtista").text(data[indexArtista].__1);
-//             $("#descArtista").text(data[indexArtista].__2);
-
-//             $("#imgArtistaWebp").attr("srcset", "../img/artistas/" + data[indexArtista].__10);
-//             $("#imgArtista").attr("src", "../img/artistas/" + data[indexArtista].__11);
-//             $("#linkFb").attr("href", data[indexArtista].__3);
-//             $("#linkTwitter").attr("href", data[indexArtista].__4);
-//             $("#linkInsta").attr("href", data[indexArtista].__5);
-//             $("#linkSpotify").attr("href", data[indexArtista].__8);
-//             $("#linkYt").attr("href", data[indexArtista].__7);
-//             $("#linkWeb").attr("href", data[indexArtista].__6);
-//             $("#linkTiktok").attr("href", data[indexArtista].__9);
-//             return false;
-//         });
-//     });
-
-//     // ocultar links vacios
-//     setTimeout(function() {
-//         $(".artista__info--redes a").each(function() {
-//             $(this).attr("href") == "" ? $(this).hide() : $(this).show();
-//         });
-//     }, 100);
-
-// };
 
 
+const scrollNav = () => {
+    function sectionFade() {
+        var sectionFade = $("section");
+        sectionFade.each(function() {
+            var mediaqueryList = window.matchMedia("(max-width: 992px)");
+            if (mediaqueryList.matches) {
+                var posSection = $(this).offset().top - 600;
+                //console.log("mobile home")
+            } else {
+                var posSection = $(this).offset().top - 300;
+                //console.log("d home");
+            }
 
-// $(function() {
-//     nav();
-//     // carruseles();
-//     cookies();
-//     menuMobile();
-//     clouds();
+            //var posSection = $(this).offset().top - 300;
+            var scrolleo = $(window).scrollTop();
+
+            if (scrolleo > posSection) {
+                $("section").removeClass("sectionOn");
+                $(this).addClass("sectionOn");
+            }
+        });
+
+        if ($(".about").hasClass("sectionOn")) {
+            $(".header li").removeClass("active");
+            $("#li-about").addClass("active");
+        } else if ($(".clientes").hasClass("sectionOn")) {
+            $(".header li").removeClass("active");
+            $("#li-clients").addClass("active");
+        } else if ($(".servicios").hasClass("sectionOn")) {
+            $(".header li").removeClass("active");
+            $("#li-services").addClass("active");
+        } else if ($(".contacto").hasClass("sectionOn")) {
+            $(".header li").removeClass("active");
+            $("#li-contact").addClass("active");
+        }
+
+    }
+
+    sectionFade();
+
+    $(document).scroll(function() {
+        sectionFade();
+    });
+}
+
+$(function() {
+    scrollNav();
+    //     nav();
+    //     // carruseles();
+    //     cookies();
+    //     menuMobile();
+    //     clouds();
 
 
-//     if ($("main").hasClass("home") || $("main").hasClass("como--llegar")) {
-//         anclas();
-//     }
+    //     if ($("main").hasClass("home") || $("main").hasClass("como--llegar")) {
+    //         anclas();
+    //     }
 
-//     $(window).resize(function() {
-//         menuMobile();
-//     });
-// });
+    //     $(window).resize(function() {
+    //         menuMobile();
+    //     });
+
+    console.log("");
+});

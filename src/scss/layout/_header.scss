@@ -1,11 +1,11 @@
 .header {
-    padding-top: 80px;
     height: 60px;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 40px;
     align-items: center;
     z-index: 9;
+    padding: 0 40px;
     transition: .3s ease-in-out all;
     &.nav-on {
         padding-top: 0;
@@ -24,17 +24,39 @@
             list-style: none;
             li {
                 font-size: var(--h5);
-                margin-left: 40px;
-                font-family: var(--primariaBold);
+                margin-left: 10px;
+                font-family: var(--terceraRegular);
                 font-weight: 600;
+                padding: 7px 10px 6px 14px;
+                border: 1px solid var(--color-back-black);
                 transition: .3s ease-in-out all;
+                color: var(--color-txt-black);
+                letter-spacing: 4px;
+                text-align: center;
+                background: #fff;
+                text-shadow: 0px 0px 0px var(--color-txt-black);
                 @media(hover: hover) {
                     &:hover {
-                        color: var(--color-txt-prm);
+                        background: var(--color-txt-black);
+                        color: #fff;
                     }
                 }
                 a {
                     color: inherit;
+                }
+                &.active {
+                    background: var(--color-back-sec);
+                    color: var(--color-txt-black);
+                }
+                &#li-clients.active {
+                    background: var(--color-back-prm);
+                    color: #fff;
+                    text-shadow: 0px 0px 0px #fff;
+                }
+                &#li-contact.active {
+                    background: var(--color-back-black);
+                    color: #fff;
+                    text-shadow: 0px 0px 0px #fff;
                 }
             }
         }

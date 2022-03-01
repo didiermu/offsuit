@@ -1,26 +1,29 @@
 header.header
-	.container-fluid
+	.container-fluid.p-0
 		.row
-			.col-6.col-lg-2.header--logo
-				a(href="../") 
-					img.img-fluid(src=ruta+"img/logo_pulso_2.png" alt="Pulso GNP 2022")
+			//- .col-6.col-lg-2.header--logo
+			//- 	a(href="../") 
+			//- 		img.img-fluid(src=ruta+"img/logo_pulso_2.png" alt="Pulso GNP 2022")
 
-			.col-lg-10.col-6.header--navegacion.d-flex
+			.col-lg-12.col-6.header--navegacion.d-flex
 				nav.navbar-expand-lg
-					.btn(data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+					.btn-ham(data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
 
 					.collapse.navbar-collapse#navbarNav
 
-						ul
+						ul.d-flex
 
-							li#li-lineup
-								a.text-decoration-none(href=ruta+"index.html") LINE
+							a.text-decoration-none(href=ruta+"index.html#about")
+								li#li-about.active ABOUT
 
-							li#li-boletos
-								a.text-decoration-none(href=ruta+"index.html#home--boletos") BOLETOS
+							a.text-decoration-none(href=ruta+"index.html#clients") 
+								li#li-clients CLIENTS
 
-							li#li-beneficios
-								a.text-decoration-none(href=ruta+"index.html#home--beneficios") BENEFICIOS
+							a.text-decoration-none(href=ruta+"index.html#services") 
+								li#li-services SERVICES
+
+							a.text-decoration-none(href=ruta+"index.html#contact") 
+								li#li-contact CONTACT
 
 
 
