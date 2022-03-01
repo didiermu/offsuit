@@ -41,20 +41,7 @@ $(function() {
 
         });
 
-        const valores = () => {
-            if (st.progress < 0.25) {
-                swiper.slideTo(0);
 
-            } else if (st.progress < 0.5) {
-                swiper.slideTo(1);
-
-            } else if (st.progress < 0.7) {
-                swiper.slideTo(2);
-
-            } else if (st.progress > 0.75) {
-                swiper.slideTo(3);
-            }
-        }
 
         window.onscroll = function(e) {
             if ($(".about").hasClass("sectionOn") || $(".clientes").hasClass("sectionOn") || $(".contacto").hasClass("sectionOn")) {
@@ -66,9 +53,9 @@ $(function() {
             this.oldScroll = this.scrollY;
         }
 
-        swiper.on("slideChange", function() {
+        swiper.on("slideChangeTransitionEnd", function() {
             if (swiper.isEnd || swiper.isBeginning) {
-                console.log("fin");
+                // console.log("fin");
                 swiper.mousewheel.disable();
             }
 
@@ -82,7 +69,7 @@ $(function() {
             //     console.log("activada");
             // }
         });
-        console.log(swiper.activeIndex);
+        // console.log(swiper.activeIndex);
 
         // var lastScrollTop = 0;
         // document.addEventListener(
