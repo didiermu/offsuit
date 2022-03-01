@@ -17,19 +17,13 @@
 //     });
 // }
 
-// const menuMobile = () => {
-//     if ($(window).width() < 992) {
-//         $("header .btn").on("click", function() {
-//             $("body").toggleClass("navOn");
-//         });
-
-//         $(".submenu")
-//             .after()
-//             .on("click", function() {
-//                 $(this).toggleClass("active");
-//             });
-//     }
-// }
+const menuMobile = () => {
+    if ($(window).width() < 992) {
+        $("header .btn-ham").on("click", function() {
+            $("body").toggleClass("nav-on");
+        });
+    }
+}
 
 // //event scroll up/down
 // const nav = () => {
@@ -61,7 +55,7 @@ const scrollNav = () => {
                 var posSection = $(this).offset().top - 600;
                 //console.log("mobile home")
             } else {
-                var posSection = $(this).offset().top - 300;
+                var posSection = $(this).offset().top - 100;
                 //console.log("d home");
             }
 
@@ -102,7 +96,7 @@ $(function() {
     //     nav();
     //     // carruseles();
     //     cookies();
-    //     menuMobile();
+    menuMobile();
     //     clouds();
 
 
@@ -114,5 +108,5 @@ $(function() {
     //         menuMobile();
     //     });
 
-    console.log("");
+
 });

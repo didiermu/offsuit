@@ -4,16 +4,35 @@ const sliderLogos = () => {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
+        grabCursor: true,
+        resizeObserver: true,
+        breakpointsInverse: true,
         autoplay: {
             delay: 1,
             disableOnInteraction: false
         },
-        slidesPerView: "auto",
         speed: 3000,
-        grabCursor: true,
-        mousewheelControl: true,
-        keyboardControl: true,
-        allowTouchMove: false,
+        breakpoints: {
+            768: {
+                slidesPerView: "auto",
+                allowTouchMove: false,
+            },
+            320: {
+                autoplay: {
+                    delay: 1,
+                    disableOnInteraction: false
+                },
+                speed: 500,
+                slidesPerView: "auto",
+                autoplay: true,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            },
+        },
+
 
         //   // If we need pagination
         //   pagination: {
@@ -21,10 +40,7 @@ const sliderLogos = () => {
         //   },
 
         //   // Navigation arrows
-        //   navigation: {
-        //       nextEl: '.swiper-button-next',
-        //       prevEl: '.swiper-button-prev',
-        //   },
+
 
     });
 }

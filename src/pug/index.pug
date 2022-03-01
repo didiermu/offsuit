@@ -7,7 +7,7 @@ html(lang='es')
 
     body
         include includes/header.pug
-        include includes/social.pug
+
 
         main.home 
             section.about#about 
@@ -16,7 +16,7 @@ html(lang='es')
 
                 .container
                     .row.align-items-center.flex-column
-                        .col-lg-3.about--logo
+                        .col-lg-3.col-8.about--logo
                             picture 
                                 source(srcset="img/logo.webp" type="image/webp")
                                 img.img-fluid(srcset="img/logo.png" alt="offsuit")
@@ -101,10 +101,8 @@ html(lang='es')
                                             img.img-fluid(srcset="img/PURINA.png" alt="PURINA")
 
 
-                                //- .swiper-pagination
-                                //- //  If we need navigation buttons 
-                                //- .swiper-button-prev
-                                //- .swiper-button-next
+                                .swiper-button-prev
+                                .swiper-button-next
 
             section.servicios#services
 

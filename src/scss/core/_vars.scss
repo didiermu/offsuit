@@ -4,6 +4,7 @@
     --color-back-sec: #00FA93;
     --color-back-ter: #E6FE52;
     --color-back-black: #202C36;
+    --color-back-gris: #F8F7F7;
     --color-txt-prm: #F318BD;
     --color-txt-sec: #00FA93;
     --color-txt-ter: #E6FE52;
@@ -27,12 +28,12 @@
     --paddingTop: calc(200px + 25 * ((100vw - 1920px)/ 320));
     ///// MEDIA MOBILE /////
     @media (max-width: 992px) {
-        --h1: calc(60px + 10 * ((100vw - 320px) / 1280)); //
-        --h2: calc(36px + 10 * ((100vw - 320px) / 1280)); //
-        --h3: calc(20px + 10 * ((100vw - 320px) / 1280));
-        --h4: calc(16px + 10 * ((100vw - 320px) / 1280));
-        --h5: calc(14px + 10 * ((100vw - 320px) / 1280)); //
-        --h6: calc(12px + 10 * ((100vw - 320px) / 1280)); //
+        --h1: calc(60px + 10 * ((100vw - 320px) / 640));
+        --h2: calc(36px + 10 * ((100vw - 320px) / 640));
+        --h3: calc(14px + 10 * ((100vw - 320px) / 640)); //
+        --h4: calc(12px + 10 * ((100vw - 320px) / 640)); //
+        --h5: calc(12px + 10 * ((100vw - 320px) / 640)); //
+        --h6: calc(10px + 10 * ((100vw - 320px) / 640)); //
         --paddingSection: 50px 0px;
     }
 }
