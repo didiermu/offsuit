@@ -73,8 +73,11 @@
         padding: calc(40px + 25 * ((100vw - 1280px)/ 1920)) 2rem;
         .img-abstract {
             &#abs-one {
-                left: -44%;
-                width: 90%;
+                right: -24%;
+                width: 70%;
+                transform: rotatez(240deg);
+                left: auto;
+                top: -2%;
             }
             &#abs-two {
                 width: 70%;
@@ -83,6 +86,10 @@
             }
             &#abs-four {
                 width: 65%;
+                left: -33%;
+                transform: rotateY(180deg) rotatez(-35deg);
+                top: 2%;
+                right: 0;
             }
             &#abs-five {
                 width: 40%;

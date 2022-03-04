@@ -1,21 +1,12 @@
-// const anclas = () => {
-//     $("#navbarNav li").on("click", function() {
-//         var nameLi = $(this).attr("id").replace("li-", ""),
-//             nameSection = $("#home--" + nameLi).offset().top;
+const anclas = () => {
+    $("#navbarNav li").on("click", function() {
 
-//         $("html, body").animate({
-//                 scrollTop: (nameSection = $("#home--" + nameLi).offset().top - 90)
-//             },
-//             1500
-//         );
+        $(".header .btn-ham").attr("aria-expanded", "false");
+        $(".navbar-collapse").removeClass("show");
+        $("body").removeClass("nav-on");
 
-//         $(".header .btn").attr("aria-expanded", "false");
-//         $(".navbar-collapse").removeClass("show");
-//         $("body").removeClass("navOn");
-
-//         return false;
-//     });
-// }
+    });
+}
 
 const menuMobile = () => {
     if ($(window).width() < 992) {
@@ -98,20 +89,7 @@ const scrollNav = () => {
 
 $(function() {
     scrollNav();
-    //     nav();
-    //     // carruseles();
-    //     cookies();
     menuMobile();
-    //     clouds();
-
-
-    //     if ($("main").hasClass("home") || $("main").hasClass("como--llegar")) {
-    //         anclas();
-    //     }
-
-    //     $(window).resize(function() {
-    //         menuMobile();
-    //     });
-
+    anclas();
 
 });
