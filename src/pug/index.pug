@@ -3,266 +3,268 @@
 
 doctype
 html(lang='es')
-    include includes/head.pug
+   include includes/head.pug
 
-    body
-        include includes/header.pug
-
-
-        main.home 
-            section.about#about 
-                video#magmaLeft(autoplay loop preload muted, src="../animations/Multicolor_2.webm") 
-                video#magmaRight(autoplay loop preload muted, src="../animations/Multicolor_2.webm") 
-
-                .container
-                    .row.align-items-center.flex-column
-                        .col-lg-3.col-8.about--logo
-                            picture 
-                                source(srcset="img/logo.webp" type="image/webp")
-                                img.img-fluid(srcset="img/logo.png" alt="offsuit")
+   body
+      include includes/header.pug
 
 
-                            img#text-circle(src="img/gif/circle_text.gif" alt="")
+      main.home 
+         section.about#about 
+            video#magmaLeft(autoplay loop preload muted, src="../animations/Multicolor_2.webm") 
+            video#magmaRight(autoplay loop preload muted, src="../animations/Multicolor_2.webm") 
 
-                        .col-lg-5
-                            h3 WE ARE A FULL DIGITAL AGENCY SPECIALIZED IN CREATIVITY, DIGITAL MARKETING, CONTENT PRODUCTION, BRANDING AND INNOVATION.
-
-                            .icon-icon-arrow
-
-            section.clientes#clients
-                .container
-                    .row.clientes--items
-                        .col-lg-4 
-                            .clientes__item#clientes_one
-                                h3 
-                                    b MORE THAN 200
-                                        br 
-                                        | DIGITAL STRATEGIES
-
-                                p WE WERE BORN AS A FLEXIBLE AGENCY FORMED BY DIGITAL CREATIVES THAT BETS TO BUILD CREATIVE TEAMS TAILORED TO EACH PROJECT.
-                        .col-lg-4 
-                            .clientes__item#clientes_two
-                                h3 
-                                    b MORE THAN 50
-                                        br 
-                                        | BRAND INNOVATIONS
-
-                                p FROM INSTAGRAM FILTERS TO LIVE 8D AUDIO STREAMNG EXPERIENCE. FROM DIGITAL REBRAND TO BRANDED CREATIVE CONTENT.PROJECT.
-
-                        .col-lg-4 
-                            .clientes__item#clientes_three
-                                h3 
-                                    b DIFFERENT SOLUTIONS
-                                        br 
-                                        | FOR DIFFERENT PEOPLE 
-
-                                p WE HAVE HELPED BRANDS FROM ALL TYPES AND INDUSTRIES TO CREATE SOLUTIONS IN DIGITAL PROJECTS AND BRAND POSITIONING.
-
-                .container-fluid.p-0
-                    .row.clientes--logos
-                        .col-12
-                            .swiper.d-flex.align-items-center.swiperClientes
-                                .swiper-wrapper.d-flex.align-items-center
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/ASPIRINA.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/ASPIRINA.png" alt="Aspirina")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/COCACOLA.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/COCACOLA.png" alt="COCA COLA")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/GOODCARE.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/GOODCARE.png" alt="GOODCARE")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/LALA.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/LALA.png" alt="LALA")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/MINI.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/MINI.png" alt="MINI")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/NESCAFE.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/NESCAFE.png" alt="NESCAFE")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/PANFILIO.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/PANFILIO.png" alt="PANFILIO")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/PROPLAN.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/PROPLAN.png" alt="PROPLAN")
-                                    .swiper-slide 
-                                        picture 
-                                            source(srcset="img/PURINA.webp" type="image/webp")
-                                            img.img-fluid(srcset="img/PURINA.png" alt="PURINA")
+            .container
+               .row.align-items-center.flex-column
+                  .col-lg-3.col-8.about--logo
+                     picture 
+                        source(srcset="img/logo.webp" type="image/webp")
+                        img.img-fluid(srcset="img/logo.png" alt="offsuit")
 
 
-                                .swiper-button-prev
-                                .swiper-button-next
+                     img#text-circle(src="img/gif/circle_text.gif" alt="")
 
-            section.servicios#services
+                  .col-lg-5
+                     h3 WE ARE A FULL DIGITAL AGENCY SPECIALIZED IN CREATIVITY, DIGITAL MARKETING, CONTENT PRODUCTION, BRANDING AND INNOVATION.
 
-                .swiper.swiperServices
-                    .swiper-wrapper
-                        .swiper-slide.slideServ
-                            .container-fluid.servicios--mkt
-                                img.img-abstract#abs-one(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
-                                img.img-abstract#abs-two(src="img/gif/Abstract_01_White.gif" alt="OffSuit")
-                                img.img-abstract#abs-three(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
-                                img.img-abstract#abs-four(src="img/gif/Circle_02_White.gif" alt="OffSuit")
-                                img.img-abstract#abs-five(src="img/services/1/Layer35.png" alt="OffSuit")
+                     .icon-icon-arrow
 
-                                .row 
-                                    .col-lg-4.offset-lg-2
-                                        .servicios__card 
-                                            h3 DIGITAL
-                                                br 
-                                                | TRANSFORMATION
-                                                span (MARKETING)
+         section.clientes#clients
+            .container
+               .row.clientes--items
+                  .col-lg-4 
+                     .clientes__item#clientes_one
+                        h3 
+                           b MORE THAN 200
+                              br 
+                              | DIGITAL STRATEGIES
 
-                                            p We help our clients to integrate their business into digital languages through short and long-term marketing strategies.
+                        p WE WERE BORN AS A FLEXIBLE AGENCY FORMED BY DIGITAL CREATIVES THAT BETS TO BUILD CREATIVE TEAMS TAILORED TO EACH PROJECT.
+                  .col-lg-4 
+                     .clientes__item#clientes_two
+                        h3 
+                           b MORE THAN 50
+                              br 
+                              | BRAND INNOVATIONS
 
-                                            p Analyze and consolidate information collected from different digital contact points to innovate in the digital actions to be generated.
+                        p FROM INSTAGRAM FILTERS TO LIVE 8D AUDIO STREAMNG EXPERIENCE. FROM DIGITAL REBRAND TO BRANDED CREATIVE CONTENT.PROJECT.
 
-                        .swiper-slide.slideServ
-                            .container-fluid.servicios--cre
-                                img.img-abstract#abs-one(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
-                                img.img-abstract#abs-two(src="img/gif/Abstract_02_Green.gif" alt="OffSuit")
+                  .col-lg-4 
+                     .clientes__item#clientes_three
+                        h3 
+                           b DIFFERENT SOLUTIONS
+                              br 
+                              | FOR DIFFERENT PEOPLE 
 
-                                picture 
-                                    source(srcset="img/services/2/Layer35.webp" type="image/webp")
-                                    img.img-abstract#abs-three(src="img/services/2/Layer35.png" alt="")
+                        p WE HAVE HELPED BRANDS FROM ALL TYPES AND INDUSTRIES TO CREATE SOLUTIONS IN DIGITAL PROJECTS AND BRAND POSITIONING.
 
-                                picture 
-                                    source(srcset="img/services/2/Layer36.webp" type="image/webp")
-                                    img.img-abstract#abs-four(src="img/services/2/Layer36.png" alt="")
-
-
-                                .row 
-                                    .col-lg-4.offset-lg-2
-                                        .servicios__card 
-                                            h3 CREATIVE
-                                                br 
-                                                | PRODUCTION
-                                                span (CREATIVIY)
-
-                                            p We devise, produce and distribute relevant digital content aligned to communication’s brand.
-
-                                            p Each content is personalized for the end user, based on their habits, tastes and global trends.
-
-                        .swiper-slide.slideServ
-                            .container-fluid.servicios--ino
-                                img.img-abstract#abs-one(src="img/gif/Circle_01_Pink.gif" alt="OffSuit")
-                                img.img-abstract#abs-two(src="img/gif/Abstract_05_W.gif" alt="OffSuit")
-                                img.img-abstract#abs-three(src="img/gif/Circle_01_Green.gif" alt="OffSuit")
-
-                                picture 
-                                    source(srcset="img/services/3/Layer40.webp" type="image/webp")
-                                    img.img-abstract#abs-four(src="img/services/3/Layer40.png" alt="")
-
-                                img.img-abstract#abs-five(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
-
-                                .row 
-                                    .col-lg-4.offset-lg-2
-                                        .servicios__card 
-                                            h3 INNOVATION
-                                                br 
-                                                | XP
-                                                span (INNOVATION)
-
-                                            p We develop digital tools that create relevance in the audience as part of tactical marketing actions.
-
-                                            p From a landing page to an augmented reality project, our team generates ideas that become brand impacts.
-
-                        .swiper-slide.slideServ
-                            .container-fluid.servicios--rep
-                                img.img-abstract#abs-one(src="img/gif/Abstract_03_White.gif" alt="OffSuit")
-                                img.img-abstract#abs-two(src="img/gif/Circle_02_Green.gif" alt="OffSuit")
-                                img.img-abstract#abs-three(src="img/gif/Abstract_03_Yellow.gif" alt="OffSuit")
-
-                                picture 
-                                    source(srcset="img/services/4/Layer46.webp" type="image/webp")
-                                    img.img-abstract#abs-four(src="img/services/4/Layer46.png" alt="")
-
-                                img.img-abstract#abs-five(src="img/gif/Abstract_05_Y.gif" alt="OffSuit")
-
-                                .row 
-                                    .col-lg-4.offset-lg-2
-                                        .servicios__card 
-                                            h3 BRAND
-                                                br 
-                                                | CHECK-UP
-                                                span (REPORTING)
-
-                                            p We develop digital tools that create relevance in the audience as part of tactical marketing actions.
-
-                                            p From a landing page to an augmented reality project, our team generates ideas that become brand impacts.
-
-                .swiper-pagination.swiper-pagination-vertical
-
-            section.contacto#contact 
-                img.img-abstract#abs-one(src="img/gif/Abstract_04_W.gif" alt="OffSuit")
-                img.img-abstract#abs-two(src="img/gif/Abstract_05_G.gif" alt="OffSuit")
-                picture 
-                    source(srcset="img/services/3/Layer40.webp" type="image/webp")
-                    img.img-abstract#abs-three(src="img/services/3/Layer40.png" alt="")
-
-                img.img-abstract#abs-four(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
-                img.img-abstract#abs-five(src="img/gif/Abstract_02_Yellow.gif" alt="OffSuit")
+            .container-fluid.p-0
+               .row.clientes--logos
+                  .col-12
+                     .swiper.d-flex.align-items-center.swiperClientes
+                        .swiper-wrapper.d-flex.align-items-center
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/ASPIRINA.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/ASPIRINA.png" alt="Aspirina")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/COCACOLA.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/COCACOLA.png" alt="COCA COLA")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/GOODCARE.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/GOODCARE.png" alt="GOODCARE")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/LALA.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/LALA.png" alt="LALA")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/MINI.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/MINI.png" alt="MINI")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/NESCAFE.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/NESCAFE.png" alt="NESCAFE")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/PANFILIO.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/PANFILIO.png" alt="PANFILIO")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/PROPLAN.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/PROPLAN.png" alt="PROPLAN")
+                           .swiper-slide 
+                              picture 
+                                 source(srcset="img/PURINA.webp" type="image/webp")
+                                 img.img-fluid(srcset="img/PURINA.png" alt="PURINA")
 
 
-                .container 
-                    .row 
-                        .col-lg-2.offset-lg-2
-                            h2 CON 
-                                br
-                                |TAC
-                                br
-                                |TO
-                            picture 
-                                source(srcset="img/logooffsuit_2.webp" type="image/webp")
-                                img.img-fluid(srcset="img/logooffsuit_2.png" alt="OffSuit")
+                        .swiper-button-prev
+                        .swiper-button-next
 
-                        .col-lg-5.offset-lg-1
-                            form.d-flex.flex-column(action="")
-                                .input__group.d-flex.flex-column
-                                    label(for="#name") NAME*
-                                    input#name(type="text") 
+         section.servicios#services
 
-                                .input__group.d-flex.flex-column
-                                    label(for="#company") COMPANY*
-                                    input#company(type="text") 
+            .swiper.swiperServices
+               .swiper-wrapper
+                  .swiper-slide.slideServ
+                     .container-fluid.servicios--mkt
+                        img.img-abstract#abs-one(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
+                        //- video.img-abstract(src="animations/Abstract_01_Green.webm", autoplay preload muted loop) 
 
-                                .input__group.d-flex.flex-column
-                                    label(for="#email") EMAIL*
-                                    input#email(type="text") 
+                        img.img-abstract#abs-two(src="img/gif/Abstract_01_White.gif" alt="OffSuit")
+                        img.img-abstract#abs-three(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
+                        img.img-abstract#abs-four(src="img/gif/Circle_02_White.gif" alt="OffSuit")
+                        img.img-abstract#abs-five(src="img/services/1/Layer35.png" alt="OffSuit")
 
-                                .input__group.d-flex.flex-column
-                                    label(for="#phone") PHONE NUMBER*
-                                    input#phone(type="text") 
+                        .row 
+                           .col-lg-4.offset-lg-2
+                              .servicios__card 
+                                 h3 DIGITAL
+                                    br 
+                                    | TRANSFORMATION
+                                    span (MARKETING)
 
-                                .input__group.d-flex.flex-column
-                                    textarea#mensaje(placeholder="MESSAGE*")
+                                 p We help our clients to integrate their business into digital languages through short and long-term marketing strategies.
 
-                                .checkboxes.d-flex#checkboxLegales
-                                    input#checkLegale.checkbox(type='checkbox')
-                                    label.checkmark(for='checkLegale')  
-                                    label#labelLegales(for='checkLegale') I agree to have my personal data processed on terms according to the Private Policy.
+                                 p Analyze and consolidate information collected from different digital contact points to innovate in the digital actions to be generated.
 
-                                button.boton.boton-primary(type='submit') SEND
+                  .swiper-slide.slideServ
+                     .container-fluid.servicios--cre
+                        img.img-abstract#abs-one(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
+                        img.img-abstract#abs-two(src="img/gif/Abstract_02_Green.gif" alt="OffSuit")
 
-                            h5.contacto--location Cda. Juan Cordero #14, Noche Buena,
-                                br
-                                | C.P. 03720, Mexico City
-                                br 
-                                a.text-decoration-none(href="tel: (55) 62 79 95 48") (55) 62 79 95 48
-                                br  
-                                a.text-decoration-none(href="mailto:hello@offsuit.mx")  hello@offsuit.mx
+                        picture 
+                           source(srcset="img/services/2/Layer35.webp" type="image/webp")
+                           img.img-abstract#abs-three(src="img/services/2/Layer35.png" alt="")
+
+                        picture 
+                           source(srcset="img/services/2/Layer36.webp" type="image/webp")
+                           img.img-abstract#abs-four(src="img/services/2/Layer36.png" alt="")
 
 
+                        .row 
+                           .col-lg-4.offset-lg-2
+                              .servicios__card 
+                                 h3 CREATIVE
+                                    br 
+                                    | PRODUCTION
+                                    span (CREATIVIY)
 
-        include includes/footer.pug
+                                 p We devise, produce and distribute relevant digital content aligned to communication’s brand.
+
+                                 p Each content is personalized for the end user, based on their habits, tastes and global trends.
+
+                  .swiper-slide.slideServ
+                     .container-fluid.servicios--ino
+                        img.img-abstract#abs-one(src="img/gif/Circle_01_Pink.gif" alt="OffSuit")
+                        img.img-abstract#abs-two(src="img/gif/Abstract_05_W.gif" alt="OffSuit")
+                        img.img-abstract#abs-three(src="img/gif/Circle_01_Green.gif" alt="OffSuit")
+
+                        picture 
+                           source(srcset="img/services/3/Layer40.webp" type="image/webp")
+                           img.img-abstract#abs-four(src="img/services/3/Layer40.png" alt="")
+
+                        img.img-abstract#abs-five(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
+
+                        .row 
+                           .col-lg-4.offset-lg-2
+                              .servicios__card 
+                                 h3 INNOVATION
+                                    br 
+                                    | XP
+                                    span (INNOVATION)
+
+                                 p We develop digital tools that create relevance in the audience as part of tactical marketing actions.
+
+                                 p From a landing page to an augmented reality project, our team generates ideas that become brand impacts.
+
+                  .swiper-slide.slideServ
+                     .container-fluid.servicios--rep
+                        img.img-abstract#abs-one(src="img/gif/Abstract_03_White.gif" alt="OffSuit")
+                        img.img-abstract#abs-two(src="img/gif/Circle_02_Green.gif" alt="OffSuit")
+                        img.img-abstract#abs-three(src="img/gif/Abstract_03_Yellow.gif" alt="OffSuit")
+
+                        picture 
+                           source(srcset="img/services/4/Layer46.webp" type="image/webp")
+                           img.img-abstract#abs-four(src="img/services/4/Layer46.png" alt="")
+
+                        img.img-abstract#abs-five(src="img/gif/Abstract_05_Y.gif" alt="OffSuit")
+
+                        .row 
+                           .col-lg-4.offset-lg-2
+                              .servicios__card 
+                                 h3 BRAND
+                                    br 
+                                    | CHECK-UP
+                                    span (REPORTING)
+
+                                 p We develop digital tools that create relevance in the audience as part of tactical marketing actions.
+
+                                 p From a landing page to an augmented reality project, our team generates ideas that become brand impacts.
+
+            .swiper-pagination.swiper-pagination-vertical
+
+         section.contacto#contact 
+            img.img-abstract#abs-one(src="img/gif/Abstract_04_W.gif" alt="OffSuit")
+            img.img-abstract#abs-two(src="img/gif/Abstract_05_G.gif" alt="OffSuit")
+            picture 
+               source(srcset="img/services/3/Layer40.webp" type="image/webp")
+               img.img-abstract#abs-three(src="img/services/3/Layer40.png" alt="")
+
+            img.img-abstract#abs-four(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
+            img.img-abstract#abs-five(src="img/gif/Abstract_02_Yellow.gif" alt="OffSuit")
+
+
+            .container 
+               .row 
+                  .col-lg-2.offset-lg-2
+                     h2 CON 
+                        br
+                        |TAC
+                        br
+                        |TO
+                     picture 
+                        source(srcset="img/logooffsuit_2.webp" type="image/webp")
+                        img.img-fluid(srcset="img/logooffsuit_2.png" alt="OffSuit")
+
+                  .col-lg-5.offset-lg-1
+                     form.d-flex.flex-column(action="")
+                        .input__group.d-flex.flex-column
+                           label(for="#name") NAME*
+                           input#name(type="text") 
+
+                        .input__group.d-flex.flex-column
+                           label(for="#company") COMPANY*
+                           input#company(type="text") 
+
+                        .input__group.d-flex.flex-column
+                           label(for="#email") EMAIL*
+                           input#email(type="text") 
+
+                        .input__group.d-flex.flex-column
+                           label(for="#phone") PHONE NUMBER*
+                           input#phone(type="text") 
+
+                        .input__group.d-flex.flex-column
+                           textarea#mensaje(placeholder="MESSAGE*")
+
+                        .checkboxes.d-flex#checkboxLegales
+                           input#checkLegale.checkbox(type='checkbox')
+                           label.checkmark(for='checkLegale')  
+                           label#labelLegales(for='checkLegale') I agree to have my personal data processed on terms according to the Private Policy.
+
+                        button.boton.boton-primary(type='submit') SEND
+
+                     h5.contacto--location Cda. Juan Cordero #14, Noche Buena,
+                        br
+                        | C.P. 03720, Mexico City
+                        br 
+                        a.text-decoration-none(href="tel: (55) 62 79 95 48") (55) 62 79 95 48
+                        br  
+                        a.text-decoration-none(href="mailto:hello@offsuit.mx")  hello@offsuit.mx
+
+
+
+      include includes/footer.pug
