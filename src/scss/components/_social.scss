@@ -12,6 +12,25 @@
     }
 }
 
+&.body-clientes,
+&.body-servicios-dos {
+    .social {
+        .icon-icon-ln:before,
+        .icon-icon-insta:before {
+            color: #fff;
+        }
+    }
+}
+
+&.body-servicios {
+    .social {
+        .icon-icon-ln:before,
+        .icon-icon-insta:before {
+            color: var(--color-back-black);
+        }
+    }
+}
+
 @media (max-width:992px) {
     &.nav-on {
         .logo-social {

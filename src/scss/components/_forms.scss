@@ -133,6 +133,9 @@
         .error-input {
             margin: 10px auto;
         }
+        label:not(.checkmark) {
+            flex-basis: 85%;
+        }
     }
 }
 

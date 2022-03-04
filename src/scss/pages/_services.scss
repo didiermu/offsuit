@@ -1,3 +1,12 @@
+&.body-servicios-dos {
+    .swiper-pagination-bullet-active {
+        background: var(--color-txt-sec) !important;
+        &::before {
+            background: var(--color-txt-sec) !important;
+        }
+    }
+}
+
 .servicios {
     position: relative;
     .container-fluid {
@@ -70,6 +79,9 @@
                 right: 5%;
                 top: 0;
             }
+        }
+        .servicios__card h3 span {
+            color: var(--color-txt-sec);
         }
     }
     &--ino {
@@ -146,7 +158,7 @@
         padding: 45px 35px 35px 45px;
         position: relative;
         z-index: 1;
-        // width: 330px;
+        width: calc(600px + 800 * ((100vw - 1280px) / 1920));
         &::before {
             content: "";
             width: 100%;
@@ -306,6 +318,9 @@
                     width: 80%;
                 }
             }
+        }
+        &__card {
+            width: 100%;
         }
         .swiper {
             &-pagination {

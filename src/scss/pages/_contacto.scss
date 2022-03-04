@@ -1,0 +1,102 @@
+.contacto {
+    padding: calc(130px + 25 * ((100vw - 1280px)/ 1920)) 40px calc(60px + 25 * ((100vw - 1280px)/ 1920));
+    overflow: hidden;
+    position: relative;
+    .img-abstract {
+        position: absolute;
+        z-index: -1;
+        &#abs-one {
+            width: 50%;
+            left: -25%;
+            top: 0%;
+            transform: rotatey(-180deg) rotatez(-100deg);
+            filter: invert(1);
+        }
+        &#abs-two {
+            width: 50%;
+            left: -8%;
+            bottom: -35%;
+            transform: rotatez(380deg);
+        }
+        &#abs-three {
+            width: 40%;
+            transform: rotateY(180deg);
+            left: -3%;
+            bottom: -10%;
+        }
+        &#abs-four {
+            width: 45%;
+            transform: rotateY(180deg);
+            right: -20%;
+            top: -5%;
+            filter: contrast(0.9);
+        }
+        &#abs-five {
+            width: 30%;
+            right: -15%;
+            bottom: 2%;
+            transform: rotateZ(-15deg);
+        }
+    }
+    h2 {
+        font: {
+            size: var(--h1);
+            family: var(--secundariaBold);
+        }
+        line-height: 0.9;
+        margin: 2.5em 0 0.1em;
+        color: var(--color-txt-prm);
+    }
+    img {
+        width: 90%;
+    }
+    form {
+        .input__group {
+            margin-bottom: 2em;
+        }
+        .boton {
+            margin: 2.6em auto;
+            min-width: 295px;
+        }
+    }
+    &--location {
+        text-align: center;
+        line-height: 2;
+        a {
+            color: inherit;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .contacto {
+        padding: calc(40px + 25 * ((100vw - 1280px)/ 1920)) 2rem;
+        .img-abstract {
+            &#abs-one {
+                left: -44%;
+                width: 90%;
+            }
+            &#abs-two {
+                width: 70%;
+                left: -30%;
+                bottom: 0;
+            }
+            &#abs-four {
+                width: 65%;
+            }
+            &#abs-five {
+                width: 40%;
+                bottom: 3%;
+            }
+        }
+        form {
+            margin-top: -3em;
+            .boton {
+                min-width: auto;
+            }
+        }
+        img {
+            width: 55%;
+        }
+    }
+}

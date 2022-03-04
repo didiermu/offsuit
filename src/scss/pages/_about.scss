@@ -34,6 +34,7 @@
     h3 {
         text-align: justify;
         margin-top: 2em;
+        font-size: var(--h4);
     }
     .icon-icon-arrow {
         position: absolute;
@@ -42,6 +43,9 @@
         right: 0;
         margin: auto;
         text-align: center;
+        &::before {
+            font-size: x-small;
+        }
     }
 }
 

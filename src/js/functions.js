@@ -71,15 +71,20 @@ const scrollNav = () => {
         if ($(".about").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-about").addClass("active");
+            $("body").attr("class", "body-about");
         } else if ($(".clientes").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-clients").addClass("active");
+            $("body").attr("class", "body-clientes");
         } else if ($(".servicios").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-services").addClass("active");
+            $("body").attr("class", "body-servicios");
         } else if ($(".contacto").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-contact").addClass("active");
+            $("body").attr("class", "body-contacto");
+
         }
 
     }

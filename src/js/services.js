@@ -91,7 +91,8 @@ $(function() {
     }
 
     const cuatro = () => {
-        let fijo = true;
+
+
         let st = ScrollTrigger.create({
             trigger: ".servicios",
             pin: true,
@@ -102,6 +103,8 @@ $(function() {
             // markers: true,
 
         });
+
+
         const swiper = new Swiper('.swiperServices', {
             // Optional parameters
             direction: 'horizontal',
@@ -127,56 +130,71 @@ $(function() {
 
 
 
-        window.onscroll = function(e) {
-            if ($(".about").hasClass("sectionOn") || $(".clientes").hasClass("sectionOn") || $(".contacto").hasClass("sectionOn")) {
+        // window.onscroll = function(e) {
+        //     // if ($(".about").hasClass("sectionOn") || $(".clientes").hasClass("sectionOn") || $(".contacto").hasClass("sectionOn")) {
+        //     //     swiper.mousewheel.enable();
 
-                // swiper.slideTo(0);
-                swiper.mousewheel.enable();
+        //     // }
+        //     if ($(".servicios").hasClass("sectionOn")) {
+        //         swiper.mousewheel.enable();
+        //     }
+        //     this.oldScroll = this.scrollY;
+        // }
 
-            }
-            this.oldScroll = this.scrollY;
-        }
+        // swiper.on("slideChangeTransitionEnd", function() {
+        //     if (swiper.isEnd || swiper.isBeginning) {
+        //         // console.log("fin");
+        //         swiper.mousewheel.disable();
+        //     }
 
-        swiper.on("slideChangeTransitionEnd", function() {
-            if (swiper.isEnd || swiper.isBeginning) {
-                // console.log("fin");
-                swiper.mousewheel.disable();
-            }
-
-            // console.log(swiper.activeIndex);
-            // if (swiper.activeIndex == 3) {
-            //     // swiper.mousewheel.disable();
-            //     console.log("desactivada")
-
-            // } else {
-            //     // swiper.mousewheel.enabled();
-            //     console.log("activada");
-            // }
-        });
+        //     if (swiper.activeIndex == 1) {
+        //         $("body").attr("class", "body-servicios-dos");
+        //     } else {
+        //         $("body").attr("class", "body-servicios");
+        //     }
+        // });
         // console.log(swiper.activeIndex);
 
-        // var lastScrollTop = 0;
-        // document.addEventListener(
-        //     "scroll",
-        //     function() {
-        //         var soo = window.pageYOffset || document.documentElement.scrollTop;
-        //         if (soo > lastScrollTop) {
-        //             console.log("abajo");
-        //             // console.log(st.progress);
-        //             // valores();
+        var lastScrollTop = 0;
+        // var posSection = $(".clientes").offset().top;
 
+        document.addEventListener(
+            "scroll",
+            function() {
+                var soo = window.pageYOffset || document.documentElement.scrollTop;
+                if (soo > lastScrollTop) {
+                    // console.log("abajo");
 
-        //         } else {
-        //             console.log("arriba");
-        //             // console.log(st.progress);
-        //             // valores();
+                    swiper.on("slideChangeTransitionEnd", function() {
+                        if (swiper.isEnd) {
+                            swiper.mousewheel.disable();
+                        }
 
-        //         }
-        //         lastScrollTop = st <= 0 ? 0 : soo; // For Mobile or negative scrolling
-        //     },
-        //     false
-        // );
-        // console.log(st);
+                        if (swiper.activeIndex == 1) {
+                            $("body").attr("class", "body-servicios-dos");
+                        } else {
+                            $("body").attr("class", "body-servicios");
+                        }
+                    });
+
+                    if ($(".contacto").hasClass("sectionOn")) {
+                        swiper.slideTo(0);
+                    }
+
+                } else {
+                    // console.log("arriba");
+                    var posSection = $(window).scrollTop();
+                    if (posSection < 880) {
+                        swiper.mousewheel.enable();
+                    }
+                    // console.log(posSection);
+                }
+
+                lastScrollTop = st <= 0 ? 0 : soo; // For Mobile or negative scrolling
+            },
+            false
+        );
+
     }
 
     // sliderPin();
