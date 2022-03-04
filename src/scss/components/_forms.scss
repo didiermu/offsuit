@@ -44,6 +44,9 @@
         height: 30px;
     }
     &.active {
+        input {
+            border-bottom: 1px solid var(--color-back-prm);
+        }
         label {
             font-size: var(--h6);
             top: -20px;

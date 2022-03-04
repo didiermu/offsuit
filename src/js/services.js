@@ -20,7 +20,7 @@ $(function() {
             loop: false,
             slidesPerView: "auto",
             allowTouchMove: true,
-            // mousewheel: true,
+            mousewheel: false,
             watchOverflow: true,
             pagination: {
                 el: '.swiper-pagination',
@@ -38,20 +38,23 @@ $(function() {
         });
 
 
+        // swiper.mousewheel.disable();
 
         window.onscroll = function(e) {
             this.oldScroll = this.scrollY;
 
-            if ($(".about").hasClass("sectionOn") || $(".clientes").hasClass("sectionOn") || $(".contacto").hasClass("sectionOn")) {
+            if ($(".servicios").hasClass("sectionOn")) {
                 // swiper.slideTo(0);
-                // swiper.mousewheel.enable();
+                swiper.mousewheel.enable();
             }
 
             if (st.progress > 0) {
                 swiper.mousewheel.enable();
+                console.log("si");
             }
             if (st.progress < 1) {
                 swiper.mousewheel.disable();
+                console.log("no");
             }
             // console.log(st.progress)
             swiper.on("slideChangeTransitionEnd", function() {
@@ -92,7 +95,6 @@ $(function() {
 
     const cuatro = () => {
 
-
         let st = ScrollTrigger.create({
             trigger: ".servicios",
             pin: true,
@@ -111,7 +113,7 @@ $(function() {
             loop: false,
             slidesPerView: "auto",
             allowTouchMove: true,
-            mousewheel: true,
+            mousewheel: false,
             watchOverflow: true,
             pagination: {
                 el: '.swiper-pagination',
