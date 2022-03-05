@@ -3,7 +3,7 @@
 ## Quick Start
 
 ```
-# 1 Clone this repositorie
+# 1 Clone this repositori
 
 # 2 Install all node packages
 npm install
