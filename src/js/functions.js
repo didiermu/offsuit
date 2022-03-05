@@ -46,38 +46,49 @@ const scrollNav = () => {
             }
         });
 
-        // var url_ob = new URL(document.URL);
-        var url_ob = window.location.pathname;
+
+        const changeUrl = (newHash) => {
+            // const nextURL;
+            const nextTitle = 'My new page title';
+            const nextState = {
+                additionalInformation: 'Updated the URL with JS'
+            };
+            window.history.pushState(nextState, nextTitle, newHash);
+            window.history.replaceState(nextState, nextTitle, newHash);
+
+        }
+
+
 
         if ($(".about").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-about").addClass("active");
             $("body").attr("class", "body-about");
 
+            changeUrl("index.html#about");
 
-            // window.location.hash = ("about");
-            // return false;
 
         } else if ($(".clientes").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-clients").addClass("active");
             $("body").attr("class", "body-clientes");
 
-            // window.location.hash = ("clients");
+            changeUrl("index.html#clients");
+
 
         } else if ($(".servicios").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-services").addClass("active");
             $("body").attr("class", "body-servicios");
 
-            // window.location.hash = ("services");
+            changeUrl("index.html#services");
 
         } else if ($(".contacto").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-contact").addClass("active");
             $("body").attr("class", "body-contacto");
 
-            // window.location.hash = ("contact");
+            changeUrl("index.html#contact");
 
         }
 

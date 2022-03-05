@@ -33,10 +33,10 @@ $(function() {
 
             //   // Navigation arrows
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-nav .swiper-button-next',
+                prevEl: '.swiper-nav .swiper-button-prev',
             },
-            slideActiveClass: 'swiper-slide-active'
+
 
         });
 

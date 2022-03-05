@@ -29,7 +29,7 @@ const gulp = require("gulp"),
 gulp.task("pug", () => {
     return gulp
         .src([
-            "./src/pug/**/**.pug",
+            "./src/pug/**/**.pug", "!./src/pug/includes/**.pug"
         ])
         .pipe(
             pug({

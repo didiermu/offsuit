@@ -27,8 +27,8 @@ const sliderLogos = () => {
                 autoplay: true,
                 centeredSlides: true,
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiperClientes .swiper-button-next',
+                    prevEl: '.swiperClientes .swiper-button-prev',
                 },
             },
         },
