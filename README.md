@@ -1,8 +1,9 @@
 # TEMPLATE GULP
 
 ## Quick Start
+
 ```
-# 1 Clone this repo
+# 1 Clone this repositorie
 
 # 2 Install all node packages
 npm install
@@ -13,16 +14,18 @@ gulp - minify CSS/JS and builds your app into the dist directory, ready for prod
 ```
 
 ## Requirements
+
 This project requires you have [nodejs](https://nodejs.org/en/) with [npm](https://www.npmjs.com/get-npm) installed.
 This project requires you have a global installation of [gulp](http://gulpjs.com/).
+
 ```
 # Install gulp globally
 npm install -g gulp
 ```
 
 **Bootstrap 4**
--Referenciado desde npm 
--Se personalizan las utilidades desde el main.scss 
+-Referenciado desde npm
+-Se personalizan las utilidades desde el main.scss
 
 **HTML / PUG**
 
@@ -40,11 +43,11 @@ $ npm install pug-cli -g
 
 Si se desconoce el lenguaje, quitar la tarea de gulp file, y maquetar de forma tradicional HTML5
 
-
 **gulp (build)**
 
 The default gulp command is set to creating a "dist" directory with a production version of the project, ready to be deployed.
 It minifies and renames JS/CSS assets as well as cleaning the old "dist" directory. CSS is autoprefixed for the latest two browser versions.
+
 ```
 gulp
 ```
