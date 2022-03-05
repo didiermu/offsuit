@@ -1,13 +1,13 @@
 const parallaxContacto = () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".contacto .col-lg-2.offset-lg-2", {
+    gsap.to(".col-lg-2.offset-lg-2", {
         yPercent: -30,
         ease: "none",
         scrollTrigger: {
-            trigger: ".contacto",
+            trigger: ".servicios",
             start: "top top",
-            end: "bottom bottom",
+            // end: "bottom bottom",
             scrub: 1,
             // markers: true,
         },

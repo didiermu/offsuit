@@ -1,10 +1,17 @@
 const anclas = () => {
     $("#navbarNav li").on("click", function() {
+        // var nameLi = $(this).attr("id").replace("li-", ""),
+        //     nameSection = $("#" + nameLi).offset().top;
+
+        // $("html, body").animate({
+        //     scrollTop: (nameSection = $("#" + nameLi).offset().top - 90)
+        // }, 1000);
 
         $(".header .btn-ham").attr("aria-expanded", "false");
         $(".navbar-collapse").removeClass("show");
         $("body").removeClass("nav-on");
 
+        // return false;
     });
 }
 
@@ -15,26 +22,6 @@ const menuMobile = () => {
         });
     }
 }
-
-// //event scroll up/down
-// const nav = () => {
-//     var lastScrollTop = 0;
-
-//     document.addEventListener(
-//         "scroll",
-//         function() {
-//             var st = window.pageYOffset || document.documentElement.scrollTop;
-//             if (st > lastScrollTop) {
-//                 $(".header").addClass("nav-on ");
-//             } else {
-//                 $(".header").removeClass("nav-on ");
-//             }
-//             lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-//         },
-//         false
-//     );
-// }
-
 
 
 const scrollNav = () => {
@@ -59,22 +46,38 @@ const scrollNav = () => {
             }
         });
 
+        // var url_ob = new URL(document.URL);
+        var url_ob = window.location.pathname;
+
         if ($(".about").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-about").addClass("active");
             $("body").attr("class", "body-about");
+
+
+            // window.location.hash = ("about");
+            // return false;
+
         } else if ($(".clientes").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-clients").addClass("active");
             $("body").attr("class", "body-clientes");
+
+            // window.location.hash = ("clients");
+
         } else if ($(".servicios").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-services").addClass("active");
             $("body").attr("class", "body-servicios");
+
+            // window.location.hash = ("services");
+
         } else if ($(".contacto").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-contact").addClass("active");
             $("body").attr("class", "body-contacto");
+
+            // window.location.hash = ("contact");
 
         }
 

@@ -10,7 +10,7 @@
 .servicios {
     position: relative;
     .container-fluid {
-        height: 100vh;
+        height: 95vh;
         // max-height: calc(800px + 250 * ((100vw - 1280px)/ 1920));
         display: flex;
         align-items: center;
@@ -188,6 +188,23 @@
         &-slide {
             overflow: hidden;
         }
+        &-nav {
+            position: absolute;
+            left: calc(140px + 10 * ((100vw - 1280px) / 1920));
+            bottom: 0;
+            width: 60%;
+            top: 0;
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+                color: var(--color-back-prm);
+            }
+            &[data-active="active-dos"] {
+                .swiper-button-next:after,
+                .swiper-button-prev:after {
+                    color: var(--color-back-sec);
+                }
+            }
+        }
         &-pagination {
             width: max-content;
             height: max-content;
@@ -323,6 +340,9 @@
             width: 100%;
         }
         .swiper {
+            &-nav {
+                display: none;
+            }
             &-pagination {
                 transform: rotateZ(-90deg);
                 bottom: 0;
