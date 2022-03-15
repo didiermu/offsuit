@@ -99,7 +99,7 @@
             span {
                 width: 100%;
                 height: 3px;
-                background: var(--color-back-sec);
+                background: var(--color-back-prm);
                 transition: .3s ease-in-out all;
                 position: absolute;
                 &.ham-top {
@@ -137,7 +137,7 @@
                 align-items: flex-end;
                 li {
                     margin: 0 0 20px;
-                    min-width: 80px;
+                    width: calc(90px + 10 * ((100vw - 320px) / 640));
                     padding: 5px;
                     background: var(--color-back-gris);
                     font-size: var(--h6);
