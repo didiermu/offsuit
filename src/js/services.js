@@ -91,6 +91,9 @@ $(function() {
                         if (swiper.activeIndex == 1) {
                             $("body").attr("class", "body-servicios-dos");
 
+                        } else if (swiper.activeIndex == 2 || swiper.activeIndex == 3) {
+                            $("body").attr("class", "body-servicios-tres");
+
                         } else {
                             $("body").attr("class", "body-servicios");
                         }

@@ -22,6 +22,15 @@
     }
 }
 
+&.body-servicios-tres {
+    .social {
+        .icon-icon-ln:before,
+        .icon-icon-insta:before {
+            color: var(--color-back-prm);
+        }
+    }
+}
+
 &.body-servicios {
     .social {
         .icon-icon-ln:before,

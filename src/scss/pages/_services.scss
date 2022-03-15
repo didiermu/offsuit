@@ -27,7 +27,7 @@
                 left: -25%;
                 bottom: 20%;
                 filter: invert(1);
-                transform: rotatex(180deg);
+                transform: rotatez(80deg) rotateY(-180deg);
             }
             &#abs-two {
                 width: 60%;
@@ -59,9 +59,9 @@
             position: absolute;
             &#abs-one {
                 width: 45%;
-                left: -20%;
-                bottom: 10%;
-                transform: rotateX(180deg);
+                left: -30%;
+                bottom: 30%;
+                transform: rotatez(-40deg) rotateY(-180deg);
             }
             &#abs-two {
                 width: 40%;
@@ -94,9 +94,9 @@
                 top: 10%;
             }
             &#abs-two {
-                width: 40%;
-                left: 0%;
-                bottom: 0%;
+                width: 45%;
+                left: -5%;
+                bottom: -8%;
                 transform: rotateY(180deg);
                 filter: invert(1);
             }
@@ -158,7 +158,7 @@
         padding: 45px 35px 35px 45px;
         position: relative;
         z-index: 1;
-        width: calc(600px + 800 * ((100vw - 1280px) / 1920));
+        // width: calc(600px + 800 * ((100vw - 1280px) / 1920));
         &::before {
             content: "";
             width: 100%;
@@ -190,9 +190,11 @@
         }
         &-nav {
             position: absolute;
-            left: calc(140px + 10 * ((100vw - 1280px) / 1920));
+            left: 0;
+            right: 0;
+            margin: auto;
             bottom: 0;
-            width: 60%;
+            width: 70%;
             top: 0;
             .swiper-button-next:after,
             .swiper-button-prev:after {

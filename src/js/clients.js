@@ -7,11 +7,15 @@ const sliderLogos = () => {
         grabCursor: true,
         resizeObserver: true,
         breakpointsInverse: true,
-        autoplay: {
-            delay: 1,
-            disableOnInteraction: false
+        // autoplay: {
+        //     delay: 1,
+        //     disableOnInteraction: false
+        // },
+        // speed: 3000,
+        navigation: {
+            nextEl: '.swiperClientes .swiper-button-next',
+            prevEl: '.swiperClientes .swiper-button-prev',
         },
-        speed: 3000,
         breakpoints: {
             768: {
                 slidesPerView: "auto",
@@ -26,10 +30,6 @@ const sliderLogos = () => {
                 slidesPerView: "auto",
                 autoplay: true,
                 centeredSlides: true,
-                navigation: {
-                    nextEl: '.swiperClientes .swiper-button-next',
-                    prevEl: '.swiperClientes .swiper-button-prev',
-                },
             },
         },
 
@@ -61,7 +61,7 @@ const parallax = () => {
     tl.from('.clientes__item', {
         opacity: 0,
         yPercent: 50,
-    }).to('.clientes__item', {
+    }).to('.clientes__item .col-lg-4', {
         opacity: 1,
         yPercent: -50,
     })

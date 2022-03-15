@@ -11,8 +11,10 @@ html(lang='es')
 
         main.home 
             section.about#about 
-                video#magmaLeft(autoplay loop preload muted, src="animations/Multicolor_2.webm") 
-                video#magmaRight(autoplay loop preload muted, src="animations/Multicolor_2.webm") 
+                //- video#magmaLeft(autoplay loop preload, src="animations/Multicolor_2.webm") 
+                //- video#magmaRight(autoplay loop preload, src="animations/Multicolor_2.webm") 
+                img.img-abstract#magmaLeft(src="img/gif/multicolor.gif" alt="OffSuit")
+                img.img-abstract#magmaRight(src="img/gif/multicolor_02.gif" alt="OffSuit")
 
                 .container
                     .row.align-items-center.flex-column
@@ -110,16 +112,24 @@ html(lang='es')
                     .swiper-wrapper
                         .swiper-slide.slideServ
                             .container-fluid.servicios--mkt
+                                //- video.img-abstract#abs-one(src="animations/Abstract_02_White.mp4", autoplay preload muted loop) 
+                                //- video.img-abstract.img-abstract#abs-two(src="animations/Abstract_01_White.mp4", autoplay preload muted loop)
+                                //- video.img-abstract.img-abstract#abs-three(src="animations/Abstract_02_White.mp4", autoplay preload muted loop)
+                                //- video.img-abstract.img-abstract#abs-four(src="animations/Circle_02_White.mp4", autoplay preload muted loop)
+
                                 img.img-abstract#abs-one(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
-                                //- video.img-abstract(src="animations/Abstract_01_Green.webm", autoplay preload muted loop) 
 
                                 img.img-abstract#abs-two(src="img/gif/Abstract_01_White.gif" alt="OffSuit")
+
                                 img.img-abstract#abs-three(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
+
                                 img.img-abstract#abs-four(src="img/gif/Circle_02_White.gif" alt="OffSuit")
+
                                 img.img-abstract#abs-five(src="img/services/1/Layer35.png" alt="OffSuit")
 
-                                .row 
-                                    .col-lg-4.offset-lg-2
+
+                                .row.justify-content-center
+                                    .col-lg-7
                                         .servicios__card 
                                             h3 DIGITAL
                                                 br 
@@ -144,8 +154,8 @@ html(lang='es')
                                     img.img-abstract#abs-four(src="img/services/2/Layer36.png" alt="")
 
 
-                                .row 
-                                    .col-lg-4.offset-lg-2
+                                .row.justify-content-center
+                                    .col-lg-7
                                         .servicios__card 
                                             h3 CREATIVE
                                                 br 
@@ -168,8 +178,8 @@ html(lang='es')
 
                                 img.img-abstract#abs-five(src="img/gif/Abstract_02_White.gif" alt="OffSuit")
 
-                                .row 
-                                    .col-lg-4.offset-lg-2
+                                .row.justify-content-center
+                                    .col-lg-7
                                         .servicios__card 
                                             h3 INNOVATION
                                                 br 
@@ -192,8 +202,8 @@ html(lang='es')
 
                                 img.img-abstract#abs-five(src="img/gif/Abstract_05_Y.gif" alt="OffSuit")
 
-                                .row 
-                                    .col-lg-4.offset-lg-2
+                                .row.justify-content-center
+                                    .col-lg-7
                                         .servicios__card 
                                             h3 BRAND
                                                 br 
@@ -211,7 +221,9 @@ html(lang='es')
                     .swiper-button-next
 
             section.contacto#contact 
-                img.img-abstract#abs-one(src="img/gif/Abstract_04_W.gif" alt="OffSuit")
+                //- img.img-abstract#abs-one(src="img/gif/Abstract_04_W.gif" alt="OffSuit")
+                video.img-abstract#abs-one(src="animations/Abstract_04_W.mp4" autoplay loop muted) 
+
                 img.img-abstract#abs-two(src="img/gif/Abstract_05_G.gif" alt="OffSuit")
                 picture 
                     source(srcset="img/services/3/Layer40.webp" type="image/webp")

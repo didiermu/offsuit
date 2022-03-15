@@ -17,6 +17,19 @@
             top: -20%;
         }
     }
+    .img-abstract {
+        position: absolute;
+        width: 30%;
+        z-index: -1;
+        &#magmaLeft {
+            left: 0%;
+            bottom: 0%;
+        }
+        &#magmaRight {
+            right: 0%;
+            top: 0%;
+        }
+    }
     &--logo {
         position: relative;
         img {
@@ -32,7 +45,6 @@
         right: 25%;
     }
     h3 {
-        text-align: justify;
         margin-top: 2em;
         font-size: var(--h4);
     }
