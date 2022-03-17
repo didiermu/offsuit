@@ -65,7 +65,7 @@ const scrollNav = () => {
             $("#li-about").addClass("active");
             $("body").attr("class", "body-about");
 
-            changeUrl("index.html#about");
+            // changeUrl("index.html#about");
 
 
         } else if ($(".clientes").hasClass("sectionOn")) {
@@ -73,7 +73,7 @@ const scrollNav = () => {
             $("#li-clients").addClass("active");
             $("body").attr("class", "body-clientes");
 
-            changeUrl("index.html#clients");
+            // changeUrl("index.html#clients");
 
 
         } else if ($(".servicios").hasClass("sectionOn")) {
@@ -81,14 +81,14 @@ const scrollNav = () => {
             $("#li-services").addClass("active");
             $("body").attr("class", "body-servicios");
 
-            changeUrl("index.html#services");
+            // changeUrl("index.html#services");
 
         } else if ($(".contacto").hasClass("sectionOn")) {
             $(".header li").removeClass("active");
             $("#li-contact").addClass("active");
             $("body").attr("class", "body-contacto");
 
-            changeUrl("index.html#contact");
+            // changeUrl("index.html#contact");
 
         }
 

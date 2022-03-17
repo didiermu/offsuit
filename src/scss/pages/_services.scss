@@ -210,8 +210,9 @@
         &-pagination {
             width: max-content;
             height: max-content;
-            left: auto;
-            right: 40px;
+            left: 0;
+            margin: auto;
+            transform: rotateZ(-90deg);
             &-bullet {
                 background: #fff;
                 opacity: 1;
