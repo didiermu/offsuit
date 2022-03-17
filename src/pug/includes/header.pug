@@ -1,0 +1,30 @@
+header.header
+	.container-fluid.p-0
+		.row
+
+			.col-lg-12.col-6.header--navegacion.d-flex
+				nav.navbar-expand-lg
+					//- .btn-ham.icon-icon-ham(data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+					.btn-ham(data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+						span.ham-top 
+						span.ham-btm 
+
+
+					.collapse.navbar-collapse#navbarNav
+
+						ul.d-flex
+
+							a.text-decoration-none(href=ruta+"index.html#about")
+								li#li-about.active ABOUT
+
+							a.text-decoration-none(href=ruta+"index.html#clients") 
+								li#li-clients CLIENTS
+
+							a.text-decoration-none(href=ruta+"index.html#services") 
+								li#li-services SERVICES
+
+							a.text-decoration-none(href=ruta+"index.html#contact") 
+								li#li-contact CONTACT
+
+
+	include social.pug

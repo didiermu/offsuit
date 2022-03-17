@@ -1,0 +1,148 @@
+.header {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    align-items: center;
+    z-index: 9;
+    padding: 0 40px;
+    transition: .3s ease-in-out all;
+    &.nav-on {
+        padding-top: 0;
+        background: rgba($color: #1a1a1a, $alpha: 0.9);
+    }
+    &--logo {
+        img {
+            max-width: 90px;
+        }
+    }
+    &--navegacion {
+        justify-content: flex-end;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                font-size: var(--h5);
+                margin-left: 10px;
+                font-family: var(--terceraRegular);
+                font-weight: 600;
+                padding: 7px 10px 6px 14px;
+                border: 1px solid var(--color-back-black);
+                transition: .3s ease-in-out all;
+                color: var(--color-txt-black);
+                letter-spacing: 4px;
+                text-align: center;
+                background: #fff;
+                text-shadow: 0px 0px 0px var(--color-txt-black);
+                @media(hover: hover) {
+                    &:hover {
+                        background: var(--color-txt-black);
+                        color: #fff;
+                    }
+                }
+                a {
+                    color: inherit;
+                }
+                &.active {
+                    background: var(--color-back-sec);
+                    color: var(--color-txt-black);
+                }
+                &#li-clients.active {
+                    background: var(--color-back-prm);
+                    color: #fff;
+                    text-shadow: 0px 0px 0px #fff;
+                }
+                &#li-contact.active {
+                    background: var(--color-back-black);
+                    color: #fff;
+                    text-shadow: 0px 0px 0px #fff;
+                }
+            }
+        }
+    }
+    .btn-ham {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    &.nav-on {
+        overflow: hidden;
+        &::after {
+            width: 100vw;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        #navbarNav {
+            right: 0 !important;
+        }
+    }
+    .header {
+        top: 0;
+        .btn-ham {
+            width: 30px;
+            height: 15px;
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            z-index: 9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            transition: .3s ease-in-out all;
+            span {
+                width: 100%;
+                height: 3px;
+                background: var(--color-back-prm);
+                transition: .3s ease-in-out all;
+                position: absolute;
+                &.ham-top {
+                    top: 0px;
+                }
+                &.ham-btm {
+                    bottom: 0;
+                }
+            }
+            &[aria-expanded=true] {
+                .ham-top {
+                    transform: rotateZ(45deg);
+                    top: 12px;
+                }
+                .ham-btm {
+                    transform: rotateZ(-45deg);
+                }
+            }
+        }
+        #navbarNav {
+            position: absolute;
+            right: -100%;
+            height: 100vh;
+            background: var(--color-back-gris);
+            top: 0;
+            width: 60vw;
+            padding: 0 16px;
+            transition: .3s ease-in-out all;
+        }
+        &--navegacion {
+            ul {
+                flex-direction: column;
+                margin-top: 100px;
+                height: 100vh;
+                align-items: flex-end;
+                li {
+                    margin: 0 0 20px;
+                    width: calc(90px + 10 * ((100vw - 320px) / 640));
+                    padding: 5px;
+                    background: var(--color-back-gris);
+                    font-size: var(--h6);
+                }
+            }
+        }
+    }
+}
