@@ -6,9 +6,16 @@
     position: fixed;
     right: 40px;
     bottom: 60px;
+    transition: .3s ease-in-out all;
     a {
         margin-left: 10px;
         text-decoration: none;
+    }
+}
+
+&.body-clientes {
+    .social {
+        bottom: 30%;
     }
 }
 

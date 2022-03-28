@@ -51,6 +51,7 @@
             &-button-prev,
             &-button-next {
                 display: flex;
+                outline: none;
                 &::after {
                     color: var(--color-txt-prm);
                     font-size: x-large;

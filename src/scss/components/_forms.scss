@@ -32,8 +32,8 @@
     label {
         font-size: var(--h4);
         position: absolute;
-        left: 5px;
-        top: 20px;
+        left: 0px;
+        top: 0px;
         transition: .3s ease-in-out all;
     }
     input {
@@ -50,7 +50,7 @@
         }
         label {
             font-size: var(--h6);
-            top: -10px;
+            top: -20px;
             bottom: auto;
         }
     }
@@ -63,7 +63,7 @@
     width: 100%;
     resize: none;
     padding: 10px;
-    height: 120px;
+    height: 80px;
     font-size: var(--h4);
     &::placeholder {
         color: var(--color-txt-black);

@@ -3,19 +3,6 @@ $(function() {
 
     const cuatro = () => {
 
-        // let st = ScrollTrigger.create({
-        //     trigger: ".servicios",
-        //     pin: true,
-        //     // pinSpacing: false,
-        //     start: "top top",
-        //     // end: "+=3000",
-        //     // endTrigger: ".contacto",
-        //     end: "bottom 100px",
-        //     markers: true,
-
-        // });
-
-
         const swiper = new Swiper('.swiperServices', {
             // Optional parameters
             direction: 'horizontal',
@@ -24,6 +11,7 @@ $(function() {
             allowTouchMove: true,
             mousewheel: false,
             watchOverflow: true,
+            preloadImages: true,
             pagination: {
                 el: '.swiper-pagination',
                 bulletClass: 'swiper-pagination-bullet',
@@ -36,6 +24,7 @@ $(function() {
                 nextEl: '.swiper-nav .swiper-button-next',
                 prevEl: '.swiper-nav .swiper-button-prev',
             },
+            slideActiveClass: 'swiper-slide-active'
 
 
         });

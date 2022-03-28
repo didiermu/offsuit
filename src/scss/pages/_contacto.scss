@@ -52,10 +52,13 @@
     }
     form {
         .input__group {
-            margin-bottom: 2em;
+            margin-bottom: 2.3em;
+            br {
+                display: none;
+            }
         }
         .boton {
-            margin: 2.6em auto;
+            margin: 1.5em auto 2em;
             min-width: 295px;
             display: block;
         }

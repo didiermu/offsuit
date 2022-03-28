@@ -18,18 +18,18 @@ const inputAnim = () => {
 
     $(".input__group input, .input__group textarea").focus(function() {
         if ($(this).val().length >= 0) {
-            $(this).parent().addClass("active");
+            $(this).parents(".input__group").addClass("active");
         } else {
-            $(this).parent().removeClass("active");
+            $(this).parents(".input__group").removeClass("active");
         }
     })
 
     $(".input__group input, .input__group textarea").blur(function() {
 
         if ($(this).val().length == 0) {
-            $(this).parent().removeClass("active");
+            $(this).parents(".input__group").removeClass("active");
         } else {
-            $(this).parent().addClass("active");
+            $(this).parents(".input__group").addClass("active");
         }
     })
 }
