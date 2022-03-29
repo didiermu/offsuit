@@ -48,6 +48,9 @@
 }
 
 @media (max-width:992px) {
+    &.body-clientes .social {
+        bottom: 60px;
+    }
     &.nav-on {
         .logo-social {
             display: flex;

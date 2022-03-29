@@ -67,15 +67,17 @@
         align-items: center;
         video {
             width: 50%;
+        }
+        .img-abstract {
+            width: 48%;
             &#magmaLeft {
                 bottom: 0;
             }
             &#magmaRight {
                 top: 0;
+                right: -3%;
+                width: 50%;
             }
-        }
-        .img-abstract {
-            width: 40%;
         }
         h3 {
             font-size: var(--h5);
