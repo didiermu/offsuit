@@ -238,7 +238,9 @@
         &-pagination {
             // position: relative;
             width: max-content;
-            // height: max-content;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             left: 0;
             right: 0;
             top: auto;

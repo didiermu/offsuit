@@ -4,7 +4,7 @@
     width: 100%;
     top: 40px;
     align-items: center;
-    z-index: 9;
+    z-index: 999;
     padding: 0 40px;
     transition: .3s ease-in-out all;
     &.nav-on {
@@ -27,7 +27,7 @@
                 margin-left: 10px;
                 font-family: var(--terceraRegular);
                 font-weight: 600;
-                padding: 7px 10px 6px 14px;
+                padding: 7px 12px 6px 16px;
                 border: 1px solid var(--color-back-black);
                 transition: .3s ease-in-out all;
                 color: var(--color-txt-black);
@@ -77,7 +77,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1;
+            z-index: 99;
         }
         #navbarNav {
             right: 0 !important;
@@ -138,7 +138,7 @@
                 li {
                     margin: 0 0 20px;
                     width: calc(90px + 10 * ((100vw - 320px) / 640));
-                    padding: 5px;
+                    padding: 5px 5px 5px 10px;
                     background: var(--color-back-gris);
                     font-size: var(--h6);
                 }

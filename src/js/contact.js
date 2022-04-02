@@ -16,6 +16,10 @@ const parallaxContacto = () => {
 
 const inputAnim = () => {
 
+    $(".input__group").on("click", function() {
+        $(this).find("input").focus();
+    })
+
     $(".input__group input, .input__group textarea").focus(function() {
         if ($(this).val().length >= 0) {
             $(this).parents(".input__group").addClass("active");
