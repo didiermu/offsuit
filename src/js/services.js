@@ -6,7 +6,7 @@ $(function() {
         const swiper = new Swiper('.swiperServices', {
             // Optional parameters
             direction: 'horizontal',
-            loop: false,
+            loop: true,
             slidesPerView: "auto",
             allowTouchMove: true,
             mousewheel: false,

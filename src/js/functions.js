@@ -33,7 +33,7 @@ const scrollNav = () => {
                 var posSection = $(this).offset().top - 600;
                 //console.log("mobile home")
             } else {
-                var posSection = $(this).offset().top - 100;
+                var posSection = $(this).offset().top - 300;
                 //console.log("d home");
             }
 
