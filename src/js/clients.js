@@ -1,47 +1,38 @@
 const sliderLogos = () => {
 
     const swiper = new Swiper('.swiperClientes', {
-        // Optional parameters
+
         direction: 'horizontal',
         loop: true,
-        grabCursor: true,
-        resizeObserver: true,
-        breakpointsInverse: true,
-        // autoplay: {
-        //     delay: 1,
-        //     disableOnInteraction: false
-        // },
-        // speed: 3000,
+        // grabCursor: true,
+        // resizeObserver: true,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: false
+        },
         navigation: {
             nextEl: '.swiperClientes .swiper-button-next',
             prevEl: '.swiperClientes .swiper-button-prev',
         },
         breakpoints: {
             768: {
+                mousewheelControl: true,
+                keyboardControl: true,
                 slidesPerView: "auto",
                 allowTouchMove: false,
+                speed: 8000,
             },
             320: {
-                autoplay: {
-                    delay: 1,
-                    disableOnInteraction: false
-                },
-                speed: 500,
                 slidesPerView: "auto",
-                autoplay: true,
                 centeredSlides: true,
+                allowTouchMove: true,
+                // autoplay: {
+                //     delay: 1,
+                //     disableOnInteraction: false
+                // },
+                speed: 5000,
             },
         },
-
-
-        //   // If we need pagination
-        //   pagination: {
-        //       el: '.swiper-pagination',
-        //   },
-
-        //   // Navigation arrows
-
-
     });
 }
 

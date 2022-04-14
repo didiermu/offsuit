@@ -6,12 +6,18 @@
     position: fixed;
     right: 40px;
     bottom: 60px;
+    transition: .3s ease-in-out all;
     a {
         margin-left: 10px;
         text-decoration: none;
     }
 }
 
+// &.body-clientes {
+//     .social {
+//         bottom: 30%;
+//     }
+// }
 &.body-clientes,
 &.body-servicios-dos {
     .social {
@@ -41,6 +47,9 @@
 }
 
 @media (max-width:992px) {
+    &.body-clientes .social {
+        bottom: 60px;
+    }
     &.nav-on {
         .logo-social {
             display: flex;
