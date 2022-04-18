@@ -1,0 +1,35 @@
+.aviso {
+    padding: calc(130px + 25 * ((100vw - 1280px)/ 1920)) 40px calc(60px + 25 * ((100vw - 1280px)/ 1920));
+    background: url('../img/back-aviso.webp') no-repeat center / cover;
+    h1 {
+        font: {
+            family: var(--secundariaRegular);
+            style: italic;
+            size: var(--h2);
+        }
+        text-align: center;
+    }
+    p {
+        a {
+            color: var(--color-txt-prm);
+        }
+    }
+    &__wrap {
+        background: rgba($color: #fff, $alpha: 0.6);
+        padding: 3em;
+        margin-bottom: 1em;
+        &:first-child {
+            padding: 1em 3em;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .aviso {
+        padding: calc(70px + 25 * ((100vw - 1280px)/ 1920)) 2rem;
+        background-attachment: fixed;
+        &__wrap {
+            padding: 1.5em;
+        }
+    }
+}

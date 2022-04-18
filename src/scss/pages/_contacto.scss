@@ -62,6 +62,9 @@
             min-width: 295px;
             display: block;
         }
+        a {
+            color: var(--color-txt-prm);
+        }
     }
     &--location {
         text-align: center;

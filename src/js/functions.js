@@ -21,6 +21,9 @@ const menuMobile = () => {
             $("body").toggleClass("nav-on");
         });
     }
+
+    // HIDE REDES AVISO
+    $("main").hasClass("aviso") ? $(".wrap-social").remove() : false;
 }
 
 
@@ -105,5 +108,10 @@ $(function() {
     scrollNav();
     menuMobile();
     anclas();
+
+    $(window).resize(function() {
+        menuMobile();
+    });
+
 
 });
