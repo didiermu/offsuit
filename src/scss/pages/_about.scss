@@ -4,6 +4,8 @@
     padding: calc(60px + 25 * ((100vw - 1280px)/ 1920)) 40px;
     height: 100vh;
     max-height: calc(800px + 250 * ((100vw - 1280px)/ 1920));
+    display: flex;
+    align-items: center;
     video {
         position: absolute;
         width: 45%;
@@ -34,6 +36,7 @@
         position: relative;
         img {
             width: 72%;
+            max-width: 220px;
             display: block;
             margin: auto;
         }
@@ -69,19 +72,69 @@
             width: 50%;
         }
         .img-abstract {
-            width: 48%;
             &#magmaLeft {
                 bottom: 0;
             }
             &#magmaRight {
                 top: 0;
                 right: -3%;
-                width: 50%;
             }
         }
         h3 {
             font-size: var(--h5);
-            margin-top: 5em;
+            margin: 3em auto 0;
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .about {
+        &--logo {
+            width: min-content;
+            img {
+                width: 40%;
+                min-width: 120px;
+            }
+        }
+        #text-circle {
+            right: 10px;
+            width: 50%;
+            min-width: auto;
+            max-width: none;
+            bottom: 2%;
+        }
+        h3 {
+            font-size: var(--h5);
+            margin: 3em auto 0;
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width:320px) {
+    .about {
+        .img-abstract {
+            max-width: 200px;
+            &#magmaLeft {
+                width: 45%;
+            }
+            &#magmaRight {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .about {
+        .img-abstract {
+            &#magmaLeft {
+                width: 20%;
+            }
+            &#magmaRight {
+                width: 25%;
+            }
         }
     }
 }

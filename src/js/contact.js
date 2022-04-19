@@ -175,6 +175,17 @@ const btnClick = () => {
     }
 }
 
+const submitForm = () => {
+    if (window.location.hash == "#wpcf7-f40-o1") {
+        $(".contacto form").addClass("form-send");
+        setTimeout(function() {
+            $(".wpcf7-response-output").fadeOut(50);
+            $(".form-send::before").fadeOut(50);
+            $(".contacto form").removeClass("form-send");
+        }, 2000);
+
+    }
+}
 
 $(function() {
     parallaxContacto();

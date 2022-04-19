@@ -67,13 +67,13 @@ gulp.task("sass", () => {
             })
         )
 
-    .pipe(
-        purgecss({
-            content: ["./src/**/*.pug", "./src/js/**/**.js"],
-            // content: ["./src/**/*.pug"],
-            css: ["./dist/css/styles.min.css"],
-        })
-    )
+    // .pipe(
+    //     purgecss({
+    //         content: ["./src/**/*.pug", "./src/js/**/**.js"],
+    //         // content: ["./src/**/*.pug"],
+    //         css: ["./dist/css/styles.min.css"],
+    //     })
+    // )
 
     .pipe(autoprefixer({
             browsers: ["last 2 versions"],

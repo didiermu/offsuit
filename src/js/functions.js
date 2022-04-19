@@ -18,8 +18,15 @@ const anclas = () => {
 const menuMobile = () => {
     if ($(window).width() < 992) {
         $("header .btn-ham").on("click", function() {
-            $("body").toggleClass("nav-on");
+            // $("body").toggleClass("nav-on");
+
+            if (!$("header .btn-ham").hasClass("collapsed")) {
+                $("body").addClass("nav-on");
+            } else {
+                $("body").removeClass("nav-on");
+            }
         });
+        console.log("i");
     }
 
     // HIDE REDES AVISO

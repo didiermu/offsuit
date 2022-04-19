@@ -1,6 +1,7 @@
 .clientes {
     background: url('../img/back-about.jpg') no-repeat center / cover;
     padding: calc(150px + 25 * ((100vw - 1280px)/ 320)) 0 calc(120px + 25 * ((100vw - 1280px)/ 320));
+    min-height: 95vh;
     &--items {
         margin-bottom: 2.5em;
     }
