@@ -246,33 +246,38 @@ html(lang='es')
                                 img.img-fluid(srcset="img/logooffsuit_2.png" alt="OffSuit")
 
                         .col-lg-5.offset-lg-1
-                            form.d-flex.flex-column(action="")
-                                .input__group.d-flex.flex-column
-                                    label(for="#name") NAME*
-                                    input#name(type="text") 
+                            .wpcf7
+                                .screen-reader-response
+                                    p 
+                                form.d-flex.flex-column(action="")
+                                    .input__group.d-flex.flex-column
+                                        label(for="#name") NAME*
+                                        input#name(type="text") 
 
-                                .input__group.d-flex.flex-column
-                                    label(for="#company") COMPANY*
-                                    input#company(type="text") 
+                                    .input__group.d-flex.flex-column
+                                        label(for="#company") COMPANY*
+                                        input#company(type="text") 
 
-                                .input__group.d-flex.flex-column
-                                    label(for="#email") EMAIL*
-                                    input#email(type="text") 
+                                    .input__group.d-flex.flex-column
+                                        label(for="#email") EMAIL*
+                                        input#email(type="text") 
 
-                                .input__group.d-flex.flex-column
-                                    label(for="#phone") PHONE NUMBER*
-                                    input#phone(type="text") 
+                                    .input__group.d-flex.flex-column
+                                        label(for="#phone") PHONE NUMBER*
+                                        input#phone(type="text") 
 
-                                .input__group.d-flex.flex-column
-                                    textarea#mensaje(placeholder="MESSAGE*")
+                                    .input__group.d-flex.flex-column
+                                        textarea#mensaje(placeholder="MESSAGE*")
 
-                                .checkboxes.d-flex#checkboxLegales
-                                    input#checkLegale.checkbox(type='checkbox')
-                                    label.checkmark(for='checkLegale')  
-                                    label#labelLegales(for='checkLegale') I agree to have my personal data processed on terms according to the 
-                                        a.text-decoration-none(href="aviso-de-privacidad.html" target="_blank") Private Policy.
+                                    .checkboxes.d-flex#checkboxLegales
+                                        input#checkLegale.checkbox(type='checkbox')
+                                        label.checkmark(for='checkLegale')  
+                                        label#labelLegales(for='checkLegale') I agree to have my personal data processed on terms according to the 
+                                            a.text-decoration-none(href="aviso-de-privacidad.html" target="_blank") Private Policy.
 
-                                button.boton.boton-primary#btnEnvia(type='submit') SEND
+                                    button.boton.boton-primary#btnEnvia(type='submit') SEND
+
+                                    .wpcf7-response-output(aria-hidden="true")
 
                             h5.contacto--location Cda. Juan Cordero #14, Noche Buena,
                                 br
@@ -282,6 +287,11 @@ html(lang='es')
                                 br  
                                 a.text-decoration-none(href="mailto:hello@offsuit.mx")  hello@offsuit.mx
 
+                .modal.fade(tabindex='-1' data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                    .modal-dialog.modal-dialog-centered
+                        .modal-content
+                            .modal-body
+                                p Hemos recibido tu  mensaje, en breve nos pondremos en contacto
 
 
         include includes/footer.pug

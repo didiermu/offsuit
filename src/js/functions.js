@@ -26,7 +26,6 @@ const menuMobile = () => {
                 $("body").removeClass("nav-on");
             }
         });
-        console.log("i");
     }
 
     // HIDE REDES AVISO

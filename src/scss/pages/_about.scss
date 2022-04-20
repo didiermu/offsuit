@@ -138,3 +138,17 @@
         }
     }
 }
+
+@media (min-width:992px) {
+    .about {
+        .img-abstract {
+            max-width: none;
+            &#magmaLeft {
+                width: 30%;
+            }
+            &#magmaRight {
+                width: 30%;
+            }
+        }
+    }
+}

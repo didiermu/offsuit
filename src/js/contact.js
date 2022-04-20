@@ -165,24 +165,58 @@ const btnClick = () => {
         valTextNum(textMsj);
         validacionSesion2(checkNews, "Debes Aceptar los Términos y Condiciones");
 
+        // ok
         if ($(".contacto .error-input").length == 0) {
-            document.querySelector(".contacto form").submit();
+            document.querySelector(".contacto form").submit()
             return false;
         } else {
             return false;
         }
 
+        // test conact form
+        // if ($(".contacto .error-input").length == 0) {
+        //     $(".contacto form").submit(function(e) {
+        //         if (localStorage.submitted == undefined) {
+
+        //             e.preventDefault(); // prevent the form from submitting
+
+        //             var url_ob = new URL(document.URL);
+        //             url_ob.hash = '#wpcf7-f40-o1';
+
+        //             // new url
+        //             var new_url = url_ob.href;
+
+        //             // change the current url
+        //             document.location.href = new_url;
+
+        //             console.log('You ve already submitted this form');
+
+        //         } else {
+        //             localStorage.submitted = true; //set submitted value to true
+        //             $(".contacto form").submit(); // dynamically submit the form
+        //             console.log('no');
+        //         }
+        //     })
+        // }
     }
 }
 
 const submitForm = () => {
     if (window.location.hash == "#wpcf7-f40-o1") {
-        $(".contacto form").addClass("form-send");
+        $(".modal").modal("show");
         setTimeout(function() {
-            $(".wpcf7-response-output").fadeOut(50);
-            $(".form-send::before").fadeOut(50);
-            $(".contacto form").removeClass("form-send");
-        }, 2000);
+            $(".modal").modal("hide");
+        }, 3000);
+        // $(".contacto form").addClass("form-send overlay");
+        // $(".wpcf7-response-output").text("Gracias por tu mensaje. El mensaje ha sido enviado.");
+        // $(".screen-reader-response p").text("Gracias por tu mensaje. El mensaje ha sido enviado.");
+        // setTimeout(function() {
+        //     $(".wpcf7-response-output").fadeOut(100);
+        //     $(".contacto form").removeClass("overlay");
+        // }, 2000);
+        // setTimeout(function() {
+        //     $(".contacto form").removeClass("form-send");
+        // }, 2100);
 
     }
 }
@@ -191,4 +225,5 @@ $(function() {
     parallaxContacto();
     inputAnim();
     btnClick();
+    submitForm();
 });
